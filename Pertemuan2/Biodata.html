@@ -1,0 +1,103 @@
+<html>
+    <body>
+        <form id="biodataForm" method="post">
+        <table border="1" height="100%" width="100%" cellspading="20" cellspacing="5">
+            <tr>
+                <td colspan="3"><h3 align="center">BIODATA MAHASISWA</h3></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <img src="/Applications/MAMP/htdocs/dasarWeb/Pertemuan2/cbc17114-aa5e-487d-aafb-21ba5660fadc.JPG" alt="User Avatar" style="border-radius: 50%; width: 100px; height: 100px;">
+                </td>
+
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td> : </td>
+                <td><input type="text" name="nama" size="30" ></td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td> : </td>
+                <td><input type="text" name="kelas" size="30" ></td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td> : </td>
+                <td><input type="text" name="fakultas" size="30" ></td>
+            </tr>
+            <tr>
+                <td>Universitas</td>
+                <td> : </td>
+                <td><input type="text" name="universitas" size="30" ></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td> : </td>
+                <td><input type="radio" name="jk" value="Laki-laki"> Laki-Laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan </td>
+            </tr>
+            <tr>
+                <td>Agama</td>
+                <td> : </td>
+                <td colspan="3"> 
+                    <select name="agama">
+                        <option value="" disabled selected hidden>-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Golongan Darah</td>
+                <td> : </td>
+                <td>
+                    <input type="radio" name="goldar" value="O">O <br>
+                    <input type="radio" name="goldar" value="A">A <br>
+                    <input type="radio" name="goldar" value="B">B <br>
+                    <input type="radio" name="goldar" value="AB">AB <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td> : </td>
+                <td><textarea name="alamat" rows="3" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Kota</td>
+                <td> : </td>
+                <td><input type="text" name="kota" size="30"></td>
+            </tr>
+            <tr>
+                <td>Provinsi</td>
+                <td> : </td>
+                <td><input type="text" name="provinsi" size="30"></td>
+            </tr>
+            <tr>
+                <td>Kewarganegaraan</td>
+                <td> : </td>
+                <td><input type="text" name="kewarganegaraan" size="30"></td>
+            </tr>
+            <tr>
+                <td>No Telepon</td>
+                <td> : </td>
+                <td><input type="text" name="telepon" size="30"></td>
+            </tr>
+        </table>
+        <br>
+        <button type="button" onclick="tampilkan()">Tampilkan</button>
+        </form>
+
+        <div id="hasil"></div>
+
+        <script>
+        function tampilkan(){}
+        </script>
+    </body>
+</html>
+</html>
