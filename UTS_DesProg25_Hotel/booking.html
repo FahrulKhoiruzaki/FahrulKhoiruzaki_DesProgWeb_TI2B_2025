@@ -20,11 +20,11 @@
                     <h1 class="title">Reservation C&F Royale Hotel</h1>
                 </header>
                 <!--Forms-->
-                <form id="bookingForm" novalidate>
+                <form id="bookingForm">
                     <!--Name-->
                     <div class="field col-12">
                         <label for="name">Name</label>
-                        <input id="name" name="name" type="text" placeholder="Your Name" required/>
+                        <input id="name" name="name" type="text" placeholder="Your Name" required minlength="2" maxlength="60"/>
                     </div>
                     <!--Email & Phone-->
                     <div class="field col-6L">
@@ -33,13 +33,13 @@
                     </div>
                     <div class="field col-6R">
                         <label for="phone">Phone Number</label>
-                        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="#### #### ####" required/>
+                        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="#### #### ####" pattern="^[0-9+\-\s]{8,20}$"  required/>
                     </div>
                     <!--Room Type, Guest & Children-->
                     <div class="field col-6L">
                         <label for="roomType">Room Type</label>
                         <select id="roomType" name="roomType" required>
-                            <option value="" selected disabled>Please Select</option>
+                            <option value="" disabled selected>Please Select</option>
                             <option>Standard Room</option>
                             <option>Deluxe Room</option>
                             <option>Executive Room</option>
@@ -51,7 +51,7 @@
                     <div class="field col-3R1">
                         <label for="guests">Number of Guest</label>
                         <select id="guests" name="guests" required>
-                            <option value="" selected disabled>Select</option>
+                            <option value="" disabled selected>Select</option>
                             <option>1</option><option>2</option><option>3</option>
                             <option>4</option><option>5</option><option>6</option>
                         </select>
@@ -59,7 +59,7 @@
                     <div class="field col-3R2">
                         <label for="children">Number of Children</label>
                         <select id="children" name="children" required>
-                            <option value="" selected disabled>Select</option>
+                            <option value="" disabled selected>Select</option>
                             <option>0</option><option>1</option><option>2</option>
                             <option>3</option><option>4</option>
                         </select>
@@ -76,7 +76,7 @@
                     <!--Special Request-->
                     <div class="field col-12">
                         <label for="request">Special Request (Optional)</label>
-                        <textarea id="request" name="request" rows="3"></textarea>
+                        <textarea id="request" name="request" rows="3" maxlength="300"></textarea>
                     </div>
                     <!--Button-->
                     <div class="actions">
