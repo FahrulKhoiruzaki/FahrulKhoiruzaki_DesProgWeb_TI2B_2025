@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Reservation C&F Royale Hotel</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/booking.css"/>
+    </head>
+    <body>
+        <main class="hero">
+            <img class="bg" src="assets/img/BookingBg.png" alt="C&F Royale Hotel"/>
+            <section class="card fade-in" aria-label="Reservation Form">
+                <header class="card__head">
+                    <a href="index.html" class="home" aria-label="Back To Home">
+                        <img src="assets/img/Icon/Home.png" alt="" class="home__icon" aria-hidden="true">
+                        <span class="home__text">Home</span>
+                    </a>
+                    <h1 class="title">Reservation C&F Royale Hotel</h1>
+                </header>
+                <!--Forms-->
+                <form id="bookingForm" novalidate>
+                    <!--Name-->
+                    <div class="field col-12">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your Name" required/>
+                    </div>
+                    <!--Email & Phone-->
+                    <div class="field col-6L">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" placeholder="ex. myname.example.com" required/>
+                    </div>
+                    <div class="field col-6R">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="#### #### ####" required/>
+                    </div>
+                    <!--Room Type, Guest & Children-->
+                    <div class="field col-6L">
+                        <label for="roomType">Room Type</label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="" selected disabled>Please Select</option>
+                            <option>Standard Room</option>
+                            <option>Deluxe Room</option>
+                            <option>Executive Room</option>
+                            <option>Family Room</option>
+                            <option>Suite Room</option>
+                            <option>Presidential Suite</option>
+                        </select>
+                    </div>
+                    <div class="field col-3R1">
+                        <label for="guests">Number of Guest</label>
+                        <select id="guests" name="guests" required>
+                            <option value="" selected disabled>Select</option>
+                            <option>1</option><option>2</option><option>3</option>
+                            <option>4</option><option>5</option><option>6</option>
+                        </select>
+                    </div>
+                    <div class="field col-3R2">
+                        <label for="children">Number of Children</label>
+                        <select id="children" name="children" required>
+                            <option value="" selected disabled>Select</option>
+                            <option>0</option><option>1</option><option>2</option>
+                            <option>3</option><option>4</option>
+                        </select>
+                    </div>
+                    <!--Check in & Check Out-->
+                    <div class="field col-6L">
+                        <label for="checkin">Check-in Date</label>
+                        <input id="checkin" name="checkin" type="date" required/>
+                    </div>
+                    <div class="field col-6R">
+                        <label for="checkout">Check-out Date</label>
+                        <input id="checkout" name="checkout" type="date" required/>
+                    </div>
+                    <!--Special Request-->
+                    <div class="field col-12">
+                        <label for="request">Special Request (Optional)</label>
+                        <textarea id="request" name="request" rows="3"></textarea>
+                    </div>
+                    <!--Button-->
+                    <div class="actions">
+                        <button type="submit" class="btn-confirm">CONFIRM</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script src="js/booking.js"></script>
+    </body>
+</html>

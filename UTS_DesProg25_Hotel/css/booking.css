@@ -1,0 +1,123 @@
+:root{
+    --brand-dark:#272727;
+    --btn:#64766A;
+    --btn-hover:#C09ABD;
+    --label:#000000;
+    --input:#747474;
+    --card-bg: rgba(244,242,243,0.70);
+    --stroke: rgba(0,0,0,0.35);
+    --radius: 15px;
+}
+*{box-sizing: border-box;}
+html, body{height: 100%;}
+body{
+    margin: 0;
+    font-family: "Alegreya", serif;
+    color: var(--brand-dark);
+    background: #000000;
+}
+/* Background */
+.hero{
+    position: relative;
+    min-height: 100vh; width: 100%;
+    display: flex; align-items: center; justify-content: center;
+}
+.bg{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+}
+/* Card */
+.card{
+    position: relative; width: min(1100px, 86vw);
+    background: var(--card-bg);
+    border: 1.5px solid var(--stroke); border-radius: 28px;
+    padding: 26px 28px 34px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.card__head{
+    position: relative;
+    display: flex; align-items: center; gap: 18px;
+    padding-bottom: 10px; margin-bottom: 14px;
+    border-bottom: 2px solid var(--brand-dark);
+}
+.card__head .home{
+    display: flex; align-items: center; gap: 5px;
+    text-decoration: none; color: inherit; cursor: pointer;
+}
+.card__head .home:hover .home__text{text-decoration: underline;}
+.home__icon{
+    width: 32px; height: 32px;
+    object-fit: contain; display: block;
+
+}
+.home__text{font-size: 25px;}
+.title{
+    position: absolute; left: 50%; transform: translateX(-50%);
+    margin: 0; font-weight: 700; font-size: 28px; text-align: center;
+}
+/* Kolom */
+#bookingForm{
+    display: grid; grid-template-columns:repeat(12, minmax(0,1fr));
+    column-gap: 16px; row-gap: 14px;
+}
+
+.col-12{grid-column: 1 / span 12;}
+.col-6L{grid-column: 1 / span 6;}
+.col-6R{grid-column: 7 / span 6;}
+.col-3R1{grid-column: 7 / span 3;}
+.col-3R2{grid-column: 10 / span 3;}
+
+.field{display: flex; flex-direction: column; gap: 8px;}
+
+label{
+    font-weight: 400; font-size: 22px;
+    color: var(--label);
+}
+input, select, textarea{
+    width: 100%; height: 54px; padding: 14px 18px;
+    font: 400 19px "Alegreya", serif;
+    color: var(--input);
+    background: #fff;
+    border: 1.8px solid var(--stroke); border-radius: var(--radius);
+    outline: none;
+    transition: box-shadow .2s ease, border-color .2s ease;
+}
+textarea{
+    height: auto; min-height: 120px;
+    resize: vertical;
+}
+input::placeholder, textarea::placeholder{color:var(--input);}
+select{
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--input) 50%),
+        linear-gradient(135deg, var(--input) 50%, transparent 50%);
+    background-position:
+        calc(100% - 24px) calc(50% - 4px),
+        calc(100% -16px) calc(50% - 4px);
+    background-size: 8px 8px, 8px 8px; background-repeat: no-repeat;
+}
+input:focus, select:focus, textarea:focus{
+    border-color: #00000080;
+    box-shadow: 0 0 0 4px rgba(192, 154, 189, 0.18);
+}
+
+.actions{
+    grid-column: 1 / -1;
+    display: flex; justify-content: center;
+    margin-top: 6px;
+}
+.btn-confirm{
+    min-width: 320px; padding: 14px 20px;
+    border-radius: 15px; border: 1px solid #00000030;
+    background: var(--btn); color: #F4F2F3;
+    font: 700 22px "Alegreya", serif; letter-spacing: .5px;
+    cursor: pointer;
+    transition: transform .08s ease, background-color .15s ease, box-shadow .15s ease-out;
+}
+.btn-confirm:hover{background:var(--btn-hover)}
+.btn-confirm:active{transform: translateY(1px);}
+
+.fade-in{opacity: 0; transform: translateY(16px); animation: fade .6s ease forwards .15s;}
+@keyframes fade{to{opacity: 1; transform: translateY(0);}}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Hotel Confirmation — C&F Royale Hotel</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Inconsolata:wght@400;600&family=Markazi+Text:wght@500;600;700&display=swap" rel="stylesheet"/>
+
+        <link rel="stylesheet" href="css/receipt.css"/>
+    </head>
+    <body>
+        <main class="wrap">
+            <!-- CARD 1 -->
+            <section class="card">
+                <header class="card__head" aria-label="Receipt Header">
+                    <img class="brand" src="assets/img/Logo.png" alt="C&F Royale Hotel"/>
+                    <h1 class="title">HOTEL CONFIRMATION</h1>
+                    <address class="addr">
+                        <span class="addr__line">Jl. Bersamamu No 69,</span>
+                        <span class="addr__line">Jawanese, Indonesia</span>
+                    </address>
+                </header>
+                <div class="divider" aria-hidden="true"></div>
+                <!-- CARD 2 -->
+                <section class="inner">
+                    <h2 class="inner__title">Guest Details</h2>
+                    <div class="inner__rule" aria-hidden="true"></div>
+
+                    <table class="kv">
+                        <tbody>
+                            <tr><th>Guest Name</th><td id="r_name">—</td></tr>
+                            <tr><th>Phone</th><td id="r_phone">—</td></tr>
+                            <tr><th>Room Type</th><td id="r_room">—</td></tr>
+                            <tr><th>Number of Guest</th><td id="r_guests">—</td></tr>
+                            <tr><th>Number of children</th><td id="r_children">—</td></tr>
+                            <tr><th scope="row">Check-in Date</th><td id="r_checkin">dd/mm/yyyy</td></tr>
+                            <tr><th scope="row">Check-out Date</th><td id="r_checkout">dd/mm/yyyy</td></tr>
+                            <tr class="sr">
+                                <th>Special Request :</th>
+                                <td>
+                                    <p id="r_request">—</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <div class="actions">
+                    <a class="btn btn--ghost" href="index.html">Back to Home</a>
+                    <button class="btn btn--solid" id="btnPdf" type="button">Download PDF</button>
+                </div>
+            </section>
+        </main>
+        <script src="js/receipt.js"></script>
+    </body>
+</html>
