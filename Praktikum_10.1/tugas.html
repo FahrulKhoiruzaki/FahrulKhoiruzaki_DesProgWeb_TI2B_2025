@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Web Fahrul</title>
+        <!-- Menyisipkan Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <!-- menyisipkan Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style>
+            .thumb{
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand font-weight-bold" href="#">Web Fahrul</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-targer="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tentang">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeri">Galeri</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Jumbotron-->
+        <div class="container my-4">
+            <div class="jumbotron text-center bg-light">
+                <h1 class="display-5 mb-3">Selamat Datang di website Fahroel Kz</h1>
+                <p class="lead">Website ini kubuat untuk tugas jobsheet, semoga dapat nilai A+. 😭😭😭</p>
+                <a href="#galeri" class="btn btn-primary">Lihat Gambar</a>
+            </div>
+        </div>
+
+        <!--Section gambar-->
+        <section id="galeri" class="container text-center mb-5">
+            <h2 class="mb-4">Galeri Sederhana</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="tugu_malang.jpg" class="img-thumbnai thumb" alt="gambar 1">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="Polinema.jpg" class="img-thumbnail thumb" alt="gambar 2">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="kanjuruhan.jpeg" class="img-thumbnail thumb" alt="gambar 3">
+                </div>
+            </div>
+        </section>
+
+        <!--tentang-->
+        <section id="tentang" class="container mb5">
+            <h2 class="text-center mb-4">Tentangg Halaman Ini</h2>
+            <p class="text-center">
+                Halaman ini saya buat untuk tugas jobsheet 10.1 di mata kuliah <strong>Desain dan Pemrograman Web</strong>.
+                Di sini terdapat Navbar, Jumbotron, dan galeri gambar yang responsif.
+            </p>
+            <p class="text-center text-muted">
+                Semoga dengan web ini bisa menjadi tambahan nilai di mata kuliah ini. Aamiin
+            </p>
+        </section>
+        <!--Footer-->
+        <footer class="bg-dark text-white text-center py-3">
+            <small>© 2025 Fahrul Khoiruzaki — 244107020234</small>
+        </footer>
+    </body>
+</html>
